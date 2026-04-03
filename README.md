@@ -1,102 +1,90 @@
-# Zotero Plugin Template
+# Missing Attachment Tool
 
 [![zotero target version](https://img.shields.io/badge/Zotero-7-green?style=flat-square&logo=zotero&logoColor=CC2936)](https://www.zotero.org)
 [![Using Zotero Plugin Template](https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?style=flat-square&logo=github)](https://github.com/windingwind/zotero-plugin-template)
 
-This is a plugin template for [Zotero](https://www.zotero.org/).
+A Zotero 7 plugin to automatically scan and classify items with missing attachments in your Zotero library.
 
-[English](README.md) | [简体中文](doc/README-zhCN.md) | [Français](doc/README-frFR.md)
+[English](README.md) | [简体中文](doc/README-zhCN.md)
 
-- Documentation for plugins development
-  - [📖 Plugin Development Documentation](https://zotero-chinese.com/plugin-dev-guide/) (Chinese, not yet complete)
-  - [📖 Plugin Development Documentation for Zotero 7](https://www.zotero.org/support/dev/zotero_7_for_developers)
-- Tools for plugins development
-  - [🛠️ Zotero Plugin Toolkit](https://github.com/windingwind/zotero-plugin-toolkit) | [API Documentation](https://github.com/windingwind/zotero-plugin-toolkit/blob/master/docs/zotero-plugin-toolkit.md)
-  - [🛠️ Zotero Plugin Scaffold](https://github.com/northword/zotero-plugin-scaffold)
-  - [ℹ️ Zotero Type Definitions](https://github.com/windingwind/zotero-types)
-  - [📜 Zotero Source Code](https://github.com/zotero/zotero)
-  - [📌 Zotero Plugin Template](https://github.com/windingwind/zotero-plugin-template) (This repo)
+## Overview
 
-> [!tip]
-> 👁 Watch this repo so that you can be notified whenever there are fixes & updates.
-
-## Plugins built with this template
-
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-better-notes?label=zotero-better-notes&style=flat-square)](https://github.com/windingwind/zotero-better-notes)
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-pdf-preview?label=zotero-pdf-preview&style=flat-square)](https://github.com/windingwind/zotero-pdf-preview)
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-pdf-translate?label=zotero-pdf-translate&style=flat-square)](https://github.com/windingwind/zotero-pdf-translate)
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-tag?label=zotero-tag&style=flat-square)](https://github.com/windingwind/zotero-tag)
-[![GitHub Repo stars](https://img.shields.io/github/stars/iShareStuff/ZoteroTheme?label=zotero-theme&style=flat-square)](https://github.com/iShareStuff/ZoteroTheme)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-reference?label=zotero-reference&style=flat-square)](https://github.com/MuiseDestiny/zotero-reference)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-citation?label=zotero-citation&style=flat-square)](https://github.com/MuiseDestiny/zotero-citation)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/ZoteroStyle?label=zotero-style&style=flat-square)](https://github.com/MuiseDestiny/ZoteroStyle)
-[![GitHub Repo stars](https://img.shields.io/github/stars/volatile-static/Chartero?label=Chartero&style=flat-square)](https://github.com/volatile-static/Chartero)
-[![GitHub Repo stars](https://img.shields.io/github/stars/l0o0/tara?label=tara&style=flat-square)](https://github.com/l0o0/tara)
-[![GitHub Repo stars](https://img.shields.io/github/stars/redleafnew/delitemwithatt?label=delitemwithatt&style=flat-square)](https://github.com/redleafnew/delitemwithatt)
-[![GitHub Repo stars](https://img.shields.io/github/stars/redleafnew/zotero-updateifsE?label=zotero-updateifsE&style=flat-square)](https://github.com/redleafnew/zotero-updateifsE)
-[![GitHub Repo stars](https://img.shields.io/github/stars/northword/zotero-format-metadata?label=zotero-format-metadata&style=flat-square)](https://github.com/northword/zotero-format-metadata)
-[![GitHub Repo stars](https://img.shields.io/github/stars/inciteful-xyz/inciteful-zotero-plugin?label=inciteful-zotero-plugin&style=flat-square)](https://github.com/inciteful-xyz/inciteful-zotero-plugin)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-gpt?label=zotero-gpt&style=flat-square)](https://github.com/MuiseDestiny/zotero-gpt)
-[![GitHub Repo stars](https://img.shields.io/github/stars/zoushucai/zotero-journalabbr?label=zotero-journalabbr&style=flat-square)](https://github.com/zoushucai/zotero-journalabbr)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-figure?label=zotero-figure&style=flat-square)](https://github.com/MuiseDestiny/zotero-figure)
-[![GitHub Repo stars](https://img.shields.io/github/stars/l0o0/jasminum?label=jasminum&style=flat-square)](https://github.com/l0o0/jasminum)
-[![GitHub Repo stars](https://img.shields.io/github/stars/lifan0127/ai-research-assistant?label=ai-research-assistant&style=flat-square)](https://github.com/lifan0127/ai-research-assistant)
-[![GitHub Repo stars](https://img.shields.io/github/stars/daeh/zotero-markdb-connect?label=zotero-markdb-connect&style=flat-square)](https://github.com/daeh/zotero-markdb-connect)
-[![GitHub Repo stars](https://img.shields.io/github/stars/daeh/zotero-citation-tally?label=citation-tally&style=flat-square)](https://github.com/daeh/zotero-citation-tally)
-
-If you are using this repo, I recommended that you put the following badge on your README:
-
-[![Using Zotero Plugin Template](https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?style=flat-square&logo=github)](https://github.com/windingwind/zotero-plugin-template)
-
-```md
-[![Using Zotero Plugin Template](https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?style=flat-square&logo=github)](https://github.com/windingwind/zotero-plugin-template)
-```
+This plugin helps you identify and manage Zotero items that are marked as having attachments but the attachment files are actually missing from your filesystem. It provides an automated scanning tool that categorizes these problematic items for easy access and management.
 
 ## Features
 
-- Event-driven, functional programming, under extensive skeleton;
-- Simple and user-friendly, works out-of-the-box.
-- Abundant examples in `src/modules/examples.ts`, covering most of the commonly used APIs in plugins (using [zotero-plugin-toolkit](https://github.com/windingwind/zotero-plugin-toolkit));
-- TypeScript support:
-  - Full type definition support for the whole Zotero project, which is written in JavaScript (using [zotero-types](https://github.com/windingwind/zotero-types));
-  - Global variables and environment setup;
-- Plugin develop/build/release workflow:
-  - ⭐ [New!] Auto hot reload! Whenever the source code is modified, automatically compile and reload. [See here→](#auto-hot-reload)
-  - Automatically generate/update plugin id/version, update configrations, and set environment variables (`development` / `production`);
-  - Automatically release to GitHub;
-- Prettier and ES Lint integration.
+- 📱 **Automatic Scanning**: Scans all available Zotero libraries (excluding feed libraries) to identify items with missing attachments
+- 🏷️ **Auto-categorization**: Automatically creates a "Missing Attachments" collection in each library and adds problematic items to it
+- 🧹 **Cleanup Tool**: Provides a cleanup command to remove items from the "Missing Attachments" collection once their attachments are recovered
+- 📊 **Statistical Report**: Shows scanning statistics including total items scanned, missing attachments found, and newly categorized items
+- ⚡ **Smart Detection**: Intelligently distinguishes between truly missing attachments and items with URL links or no attachments
 
-## Examples
+## Detection Rules
 
-This repo provides examples for [zotero-plugin-toolkit](https://github.com/windingwind/zotero-plugin-toolkit) APIs.
+- Only regular items are checked (excludes attachments, notes, and annotations themselves)
+- Items with no attachments are not considered as missing attachments
+- Items with URL links are not considered as having missing local attachments
+- Items with missing local attachment files are flagged as "missing attachment items"
 
-Search `@example` in `src/examples.ts`. The examples are called in `src/hooks.ts`.
+## Installation
 
-### Basic Examples
+1. Download the latest `.xpi` file from the [Releases](../../releases) page
+2. In Zotero, go to `Tools` → `Add-ons` → click the gear icon → `Install Add-on From File...`
+3. Select the downloaded `.xpi` file
 
-- registerNotifier
-- registerPrefs, unregisterPrefs
+## Usage
 
-### Shortcut Keys Examples
+### Scan for Missing Attachments
 
-- registerShortcuts
-- exampleShortcutLargerCallback
-- exampleShortcutSmallerCallback
-- exampleShortcutConflictionCallback
+1. Open Zotero
+2. Go to `Tools` → `Scan Missing Attachments and Categorize`
+3. The plugin will scan your libraries and display results
+4. Items with missing attachments will be automatically added to a "Missing Attachments" collection in each library
 
-### UI Examples
+### Clean Up Collection
 
-![image](https://user-images.githubusercontent.com/33902321/211739774-cc5c2df8-5fd9-42f0-9cdf-0f2e5946d427.png)
+1. After recovering missing attachments, go to `Tools` → `Clean Missing Attachments Collection`
+2. The plugin will remove items that now have valid attachments from the "Missing Attachments" collection
 
-- registerStyleSheet(the official make-it-red example)
-- registerRightClickMenuItem
-- registerRightClickMenuPopup
-- registerWindowMenuWithSeprator
-- registerExtraColumn
-- registerExtraColumnWithCustomCell
-- registerCustomItemBoxRow
-- registerLibraryTabPanel
-- registerReaderTabPanel
+## Development
+
+### Setup
+
+```bash
+npm install
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Development Mode (with hot reload)
+
+```bash
+npm start
+```
+
+### Build for Release
+
+```bash
+npm run release
+```
+
+## Built with
+
+- Based on [Zotero Plugin Template](https://github.com/windingwind/zotero-plugin-template)
+- Uses [Zotero Plugin Toolkit](https://github.com/windingwind/zotero-plugin-toolkit)
+- TypeScript with [Zotero Type Definitions](https://github.com/windingwind/zotero-types)
+
+## License
+
+This project is licensed under the AGPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This plugin was built using the [Zotero Plugin Template](https://github.com/windingwind/zotero-plugin-template) by [windingwind](https://github.com/windingwind).
 
 ### Preference Pane Examples
 
