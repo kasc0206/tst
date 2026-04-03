@@ -1,103 +1,90 @@
-# Zotero Plugin Template
+# 缺失附件自动归类工具
 
 [![zotero target version](https://img.shields.io/badge/Zotero-7-green?style=flat-square&logo=zotero&logoColor=CC2936)](https://www.zotero.org)
 [![Using Zotero Plugin Template](https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?style=flat-square&logo=github)](https://github.com/windingwind/zotero-plugin-template)
 
-这是 [Zotero](https://www.zotero.org/) 的插件模板。
+一个 Zotero 7 插件，用于自动扫描并分类 Zotero 库中有缺失附件的条目。
 
-[English](../README.md) | [简体中文](./README-zhCN.md) | [Français](./README-frFR.md)
+[English](../README.md) | [简体中文](./README-zhCN.md)
 
-- 开发指南
-  - [📖 插件开发文档](https://zotero-chinese.com/plugin-dev-guide/) (中文版，尚不完善)
-  - [📖 Zotero 7 插件开发文档](https://www.zotero.org/support/dev/zotero_7_for_developers)
-- 开发工具参考
-  - [🛠️ Zotero 插件工具包](https://github.com/windingwind/zotero-plugin-toolkit) | [API 文档](https://github.com/windingwind/zotero-plugin-toolkit/blob/master/docs/zotero-plugin-toolkit.md)
-  - [🛠️ Zotero 插件开发脚手架](https://github.com/northword/zotero-plugin-scaffold)
-  - [📜 Zotero 源代码](https://github.com/zotero/zotero)
-  - [ℹ️ Zotero 类型定义](https://github.com/windingwind/zotero-types)
-  - [📌 Zotero 插件模板](https://github.com/windingwind/zotero-plugin-template) (即本仓库)
+## 概述
 
-> [!tip]
-> 👁 Watch 本仓库，以及时收到修复或更新的通知。
+这个插件帮助你识别和管理 Zotero 中被标记为有附件但实际附件文件缺失的条目。它提供了一个自动扫描工具，将这些有问题的条目分类到指定的分类中，方便查看和管理。
 
-## 使用此模板构建的插件
+## 功能
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-better-notes?label=zotero-better-notes&style=flat-square)](https://github.com/windingwind/zotero-better-notes)
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-pdf-preview?label=zotero-pdf-preview&style=flat-square)](https://github.com/windingwind/zotero-pdf-preview)
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-pdf-translate?label=zotero-pdf-translate&style=flat-square)](https://github.com/windingwind/zotero-pdf-translate)
-[![GitHub Repo stars](https://img.shields.io/github/stars/windingwind/zotero-tag?label=zotero-tag&style=flat-square)](https://github.com/windingwind/zotero-tag)
-[![GitHub Repo stars](https://img.shields.io/github/stars/iShareStuff/ZoteroTheme?label=zotero-theme&style=flat-square)](https://github.com/iShareStuff/ZoteroTheme)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-reference?label=zotero-reference&style=flat-square)](https://github.com/MuiseDestiny/zotero-reference)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-citation?label=zotero-citation&style=flat-square)](https://github.com/MuiseDestiny/zotero-citation)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/ZoteroStyle?label=zotero-style&style=flat-square)](https://github.com/MuiseDestiny/ZoteroStyle)
-[![GitHub Repo stars](https://img.shields.io/github/stars/volatile-static/Chartero?label=Chartero&style=flat-square)](https://github.com/volatile-static/Chartero)
-[![GitHub Repo stars](https://img.shields.io/github/stars/l0o0/tara?label=tara&style=flat-square)](https://github.com/l0o0/tara)
-[![GitHub Repo stars](https://img.shields.io/github/stars/redleafnew/delitemwithatt?label=delitemwithatt&style=flat-square)](https://github.com/redleafnew/delitemwithatt)
-[![GitHub Repo stars](https://img.shields.io/github/stars/redleafnew/zotero-updateifsE?label=zotero-updateifsE&style=flat-square)](https://github.com/redleafnew/zotero-updateifsE)
-[![GitHub Repo stars](https://img.shields.io/github/stars/northword/zotero-format-metadata?label=zotero-format-metadata&style=flat-square)](https://github.com/northword/zotero-format-metadata)
-[![GitHub Repo stars](https://img.shields.io/github/stars/inciteful-xyz/inciteful-zotero-plugin?label=inciteful-zotero-plugin&style=flat-square)](https://github.com/inciteful-xyz/inciteful-zotero-plugin)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-gpt?label=zotero-gpt&style=flat-square)](https://github.com/MuiseDestiny/zotero-gpt)
-[![GitHub Repo stars](https://img.shields.io/github/stars/zoushucai/zotero-journalabbr?label=zotero-journalabbr&style=flat-square)](https://github.com/zoushucai/zotero-journalabbr)
-[![GitHub Repo stars](https://img.shields.io/github/stars/MuiseDestiny/zotero-figure?label=zotero-figure&style=flat-square)](https://github.com/MuiseDestiny/zotero-figure)
-[![GitHub Repo stars](https://img.shields.io/github/stars/l0o0/jasminum?label=jasminum&style=flat-square)](https://github.com/l0o0/jasminum)
-[![GitHub Repo stars](https://img.shields.io/github/stars/lifan0127/ai-research-assistant?label=ai-research-assistant&style=flat-square)](https://github.com/lifan0127/ai-research-assistant)
-[![GitHub Repo stars](https://img.shields.io/github/stars/daeh/zotero-markdb-connect?label=zotero-markdb-connect&style=flat-square)](https://github.com/daeh/zotero-markdb-connect)
+- 📱 **自动扫描**：扫描所有可用的 Zotero 库（排除 feed 库）中的常规条目，识别有缺失附件的条目
+- 🏷️ **自动分类**：在每个库中自动创建"缺失附件"分类，并将有问题的条目加入其中
+- 🧹 **清理工具**：提供清理命令，将已恢复附件的条目从"缺失附件"分类中移出
+- 📊 **统计报告**：显示扫描统计信息，包括扫描的条目总数、发现的缺失附件数和新增分类的条目数
+- ⚡ **智能检测**：智能区分真正缺失的附件、URL 链接附件和无附件的条目
 
-如果你正在使用此库，我建议你将这个标志 ([![Using Zotero Plugin Template](https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?style=flat-square&logo=github)](https://github.com/windingwind/zotero-plugin-template)) 放在 README 文件中：
+## 判定规则
 
-```md
-[![Using Zotero Plugin Template](https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?style=flat-square&logo=github)](https://github.com/windingwind/zotero-plugin-template)
+- 仅检查常规文献条目（不检查附件、笔记、注释条目本身）
+- 条目没有任何附件时，不视为缺失附件
+- 附件类型为"链接 URL"时，不视为本地缺失
+- 其他附件若文件不存在，则判定该条目为"缺失附件条目"
+
+## 安装
+
+1. 从 [Releases](../../releases) 页面下载最新的 `.xpi` 文件
+2. 在 Zotero 中，转到 `Tools` → `Add-ons` → 点击齿轮图标 → `Install Add-on From File...`
+3. 选择下载的 `.xpi` 文件
+
+## 使用
+
+### 扫描缺失附件
+
+1. 打开 Zotero
+2. 转到 `Tools` → `Scan Missing Attachments and Categorize`
+3. 插件将扫描你的库并显示结果
+4. 有缺失附件的条目将自动添加到每个库中的"缺失附件"分类
+
+### 清理分类
+
+1. 恢复缺失附件后，转到 `Tools` → `Clean Missing Attachments Collection`
+2. 插件将从"缺失附件"分类中移除现在已有有效附件的条目
+
+## 开发
+
+### 环境设置
+
+```bash
+npm install
 ```
 
-## Features 特性
+### 构建
 
-- 事件驱动、函数式编程的可扩展框架；
-- 简单易用，开箱即用；
-- `src/modules/examples.ts` 中有丰富的示例，涵盖了插件中常用的大部分 API (使用 [zotero-plugin-toolkit](https://github.com/windingwind/zotero-plugin-toolkit)；
-- TypeScript 支持：
-  - 为使用 JavaScript 编写的 Zotero 源码提供全面的类型定义支持 (使用 [zotero-types](https://github.com/windingwind/zotero-types))；
-  - 全局变量和环境设置；
-- 插件开发/构建/发布工作流：
-  - ⭐自动热重载！每当修改源码时，都会自动编译并重新加载插件；
-  - 自动生成/更新插件版本、更新配置和设置环境变量 (`development`/`production`)；
-  - 自动发布到 GitHub ;
-- 集成 Prettier 和 ES Lint;
+```bash
+npm run build
+```
 
-## Examples 示例
+### 开发模式（带热重载）
 
-此库提供了 [zotero-plugin-toolkit](https://github.com/windingwind/zotero-plugin-toolkit) 中 API 的示例。
+```bash
+npm start
+```
 
-在 `src/examples.ts` 中搜索`@example` 查看示例。这些示例在 `src/hooks.ts` 中调用演示。
+### 构建发布版本
 
-### 基本示例 (Basic Examples)
+```bash
+npm run release
+```
 
-- registerNotifier
-- registerPrefs, unregisterPrefs
+## 使用的技术
 
-### 快捷键示例 (Shortcut Keys Examples)
+- 基于 [Zotero Plugin Template](https://github.com/windingwind/zotero-plugin-template)
+- 使用 [Zotero Plugin Toolkit](https://github.com/windingwind/zotero-plugin-toolkit)
+- TypeScript 和 [Zotero Type Definitions](https://github.com/windingwind/zotero-types)
 
-- registerShortcuts
-- exampleShortcutLargerCallback
-- exampleShortcutSmallerCallback
-- exampleShortcutConflictionCallback
+## 许可证
 
-### UI 示例 (UI Examples)
+本项目采用 AGPL-3.0 许可证 - 详见 [LICENSE](../LICENSE) 文件
 
-![image](https://user-images.githubusercontent.com/33902321/211739774-cc5c2df8-5fd9-42f0-9cdf-0f2e5946d427.png)
+## 致谢
 
-- registerStyleSheet(the official make-it-red example)
-- registerRightClickMenuItem
-- registerRightClickMenuPopup
-- registerWindowMenuWithSeprator
-- registerExtraColumn
-- registerExtraColumnWithCustomCell
-- registerCustomItemBoxRow
-- registerLibraryTabPanel
-- registerReaderTabPanel
-
-### 首选项面板示例 (Preference Pane Examples)
-
-![image](https://user-images.githubusercontent.com/33902321/211737987-cd7c5c87-9177-4159-b975-dc67690d0490.png)
+本插件基于 [windingwind](https://github.com/windingwind) 的 [Zotero Plugin Template](https://github.com/windingwind/zotero-plugin-template) 开发。
 
 - Preferences bindings
 - UI Events
